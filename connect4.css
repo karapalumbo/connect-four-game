@@ -1,0 +1,69 @@
+/* game board table */
+
+body {
+  margin: 100px;
+  background-image: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v384-ning-05b-gradientbg_2.jpg?bg=transparent&con=3&cs=srgb&dpr=1&fm=jpg&ixlib=php-3.1.0&q=65&usm=15&vib=3&w=600&s=f19f1468ca52c665056a5fe255ecb2cf);
+  background-size: cover;
+}
+
+h1 {
+  font-family: Andale Mono, monospace;
+  text-align: center;
+  font-size: 70px;
+}
+
+#board td {
+  width: 70px;
+  height: 70px;
+  border: solid 1px #666;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  /* TODO: make into circles */
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.fall {
+  animation-name: fall-animation;
+  animation-duration: 500ms;
+}
+
+@keyframes fall-animation {
+  from {
+    transform: translateY(-300px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* TODO: make pieces red/blue,  depending on player 1/2 piece */
+
+.p1 {
+  background-color: red;
+}
+
+.p2 {
+  background-color: blue;
+}
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px gray;
+  border-radius: 50%;
+}
+
+#column-top td:hover {
+  background-color: whitesmoke;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
